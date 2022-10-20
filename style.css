@@ -1,0 +1,178 @@
+html{
+    height: 150%;
+    width: 100%;
+
+    margin: 0pt;
+    border: 0pt;
+    padding: 0pt;
+    background: linear-gradient(-30deg, rgba(33, 147, 153, 1), rgba(209, 253, 255, 1));
+}
+
+body {
+    height: 100%;
+    width: 100%;
+
+    margin: 0pt;
+    border: 0pt;
+    padding: 0pt;
+
+    background: linear-gradient(-30deg, rgba(33, 147, 153, 1), rgba(209, 253, 255, 1));
+}
+div{
+   border: solid;
+}
+#top{
+    position: fixed;
+    z-index: +1;
+    height: 5%;
+    width: 100%;
+
+    margin: 20pt;
+    border: 0pt;
+    padding: 0pt;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    #bar{
+        height: 50pt;
+        width: 90%;
+    
+        margin: 0pt;
+        border: 0pt;
+        border-radius: 25pt;
+        padding: 0pt;
+
+        background-color: #1B696D;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+        #logoBar{
+            
+            height: 100%;
+            width: 10%;
+        
+            margin: 0pt;
+            border: 0pt;
+            padding: 0pt;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        #menuBar{
+            height: 100%;
+            width: 80%;
+        
+            margin: 10pt;
+            border: 0pt;
+            padding: 0pt;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #loginBar{
+            height: 100%;
+            width: 10%;
+        
+            margin: 0pt;
+            border: 0pt;
+            padding: 0pt;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+      
+#mid{
+    height: 80%;
+    width: 100%;
+
+    margin: 0pt;
+    border: 0pt;
+    padding: 0pt; 
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    #imgMidFundo{
+        height: 100%;
+        width: 100%;
+    
+        margin: 0pt;
+        border: 0pt;
+        padding: 0pt;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        background-image: url("back01.png");
+        mix-blend-mode: luminosity;
+        background-repeat: no-repeat;
+        background-position: right -100pt bottom -80pt;
+        }
+        #abaMid{
+            height: 400pt;
+            width: 400pt;
+        
+            margin: 0pt;
+            border: 0pt;
+            border-radius: 25pt;
+            padding: 0pt;
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+
+            background-color: rgba(68, 154, 159, 0.75);
+
+        }
+            #cadastrar{
+                height: 30pt;
+                width: 320pt;
+
+                margin: 10pt;
+                border: 0pt;
+                border-radius: 25pt;
+                padding: 0pt;
+
+            }
+            .inpCadastro{
+                height: 30pt;
+                width: 80%;
+                min-width: 300pt;
+
+                margin: 10pt;
+                border: 0pt;
+                border-radius: 25pt;
+                padding: 0pt;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+                font-size: 16pts;
+            }
+#bot{
+    height: 20%;
+    width: 100%;
+
+    margin: 0pt;
+    border: 0pt;
+    padding: 0pt;  
+
+    background-color: #0b3133;
+
+}
