@@ -16,10 +16,11 @@ body {
     border: 0pt;
     padding: 0pt;
 
-    background: linear-gradient(-30deg, rgba(33, 147, 153, 1), rgba(209, 253, 255, 1));
+    background: #35A8AE /*linear-gradient(-30deg, rgba(33, 147, 153, 1), rgba(209, 253, 255, 1))*/;
 }
 div{
    border: solid;
+   border-color: #35A8AE;
 }
 #top{
     position: fixed;
@@ -36,7 +37,7 @@ div{
     align-items: center;
 }
     #bar{
-        height: 50pt;
+        height: 60pt;
         width: 100%;
     
         margin: 0pt;
@@ -44,7 +45,11 @@ div{
         border-radius: 0pt;
         padding: 0pt;
 
-        background-color: #1B696Daa;
+        background: rgba( 27, 105, 109, 0.25);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 5px );
+        -webkit-backdrop-filter: blur( 5px );
+        box-shadow: 0px 20px 50px 10px rgba(0,0,0,0.2);
     
         display: flex;
         justify-content: center;
@@ -62,6 +67,8 @@ div{
             display: flex;
             justify-content: center;
             align-items: center;
+
+            text-align: center;
             
         }
 
@@ -148,17 +155,19 @@ div{
         justify-content: center;
         align-items: center;
         
-        background-image: url("back01.png");
+        background-image: url("img/layered-peaks-haikei.svg");
         mix-blend-mode: luminosity;
+        
         background-repeat: no-repeat;
-        background-position: right -100pt bottom -80pt;
+        background-size: 100%;
+        background-position: bottom;
         }
         #abaMid{
             height: 400pt;
             width: 400pt;
         
             margin: 0pt;
-            border: 0pt;
+            border: 5pt;
             border-radius: 25pt;
             padding: 0pt;
     
@@ -168,8 +177,11 @@ div{
             flex-direction: column;
             
 
-            background-color: rgba(68, 154, 159, 0.75);
-
+            background: rgba( 27, 105, 109, 0.25);
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 5px );
+            -webkit-backdrop-filter: blur( 5px );
+            box-shadow: 0px 20px 50px 10px rgba(0,0,0,0.2);
         }
             #cadastrar{
                 height: 30pt;
@@ -183,7 +195,7 @@ div{
             }
 
             #cadastrar:hover{
-                background-color: blue;
+                background-color:  rgba( 27, 105, 109, 0.25);
             }
 
             .inpCadastro{
@@ -203,6 +215,47 @@ div{
                 text-align: center;
                 font-size: 16pts;
             }
+                .inputGroup{
+                  
+                    position: relative;
+
+                 
+
+                }
+                .input {
+                    height: 10pt;
+                    width: 80%;
+                    min-width: 300pt;
+
+                    padding: 10px;
+                    border: 10px;
+                    border-radius: 25px;
+                    color: skyblue;
+                    background-color: white ;
+                    outline: 5px ;
+                    
+                    
+                }
+                .inputLabel{
+                   
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transform: translate(10px, 10px);
+                    transition: transform .25s;
+                }
+                .input:focus+.inputLabel,
+                .input:valid+.inputLabel{
+                    transform: 
+                    translate(10px, -20px) scale(0.8);
+                    color: aqua;
+                    padding-inline: 0px;
+                    background-color: transparent;
+                }
+                .input:is(:focus, :valid){
+                    outline-color: rgb(14, 10, 6);
+                }
+
             
 #bot{
     height: 20%;
