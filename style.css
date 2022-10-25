@@ -1,27 +1,73 @@
-html{
-    height: 150%;
-    width: 100%;
+@font-face {
+    font-family: "Poppins";
+    src: url("fonts/Poppins-SemiBold.ttf") format("ttf");
+  }
 
+html{
+    font-family: Poppins;
+/* parametros para o html */
+    height: 150%; 
+    width: 100%;
+/* altura e largura da pagina % da tela */
     margin: 0pt;
     border: 0pt;
     padding: 0pt;
+/* margem borda distanvia da borda */
     background: linear-gradient(-30deg, rgba(33, 147, 153, 1), rgba(209, 253, 255, 1));
+/* fundo da bagina geral (geralmente o mesmo fundo do conteudo) */
 }
 
 body {
+/* parametros para o corpo do site */
     height: 100%;
     width: 100%;
-
+/* altura e largura da pagina % do html*/
     margin: 0pt;
     border: 0pt;
     padding: 0pt;
+/* margem borda distanvia da borda */
+    background: #ACECEF;
+/* fundo da bagina geral (geralmente o mesmo fundo do conteudo) */
 
-    background: #35A8AE /*linear-gradient(-30deg, rgba(33, 147, 153, 1), rgba(209, 253, 255, 1))*/;
+    color: #F3F1DB;
+
 }
-div{
-   border: solid;
-   border-color: #35A8AE;
+
+::-webkit-scrollbar{
+    width: 3pt;
 }
+::-webkit-scrollbar-track{
+    background-color: #35A8AE;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #61d8df;
+}
+
+
+
+h2{
+    margin: 5pt;
+    border: 0pt;
+    padding: 0pt;
+
+    color: #393325;
+}
+
+#textoMid {
+    /* parametros para o corpo do site */
+    height: 25pt;
+    width: 100%;
+/* altura e largura da pagina % do html*/
+    margin: 25pt;
+    border: 0pt;
+    padding: 0pt;
+
+    text-align: center;
+    
+    
+
+}
+
 #top{
     position: fixed;
     z-index: +1;
@@ -37,100 +83,90 @@ div{
     align-items: center;
 }
     #bar{
-        height: 60pt;
+        height: 40pt;
         width: 100%;
     
         margin: 0pt;
         border: 0pt;
-        border-radius: 0pt;
-        padding: 0pt;
+        padding: 15pt 15pt 0pt 15pt;
 
-        background: rgba( 27, 105, 109, 0.25);
-        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-        backdrop-filter: blur( 5px );
-        -webkit-backdrop-filter: blur( 5px );
-        box-shadow: 0px 20px 50px 10px rgba(0,0,0,0.2);
+        background:  rgba(11, 110, 115, 0.4);
+        box-shadow: 0 10pt 15pt 0 rgba( 31, 38, 135, 0.2 );
+        backdrop-filter: blur( 2pt );
+        -webkit-backdrop-filter: blur( 1px );
+        box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.2);
     
         display: flex;
         justify-content: center;
         align-items: center;
     }
         #logoBar{
-            
             height: 100%;
-            width: 14%;
+            width: 15%;
         
             margin: 0pt;
             border: 0pt;
-            padding: 0pt;
+            padding: 0 4pt 0 0;
 
             display: flex;
-            justify-content: center;
-            align-items: center;
-
-            text-align: center;
-            
+            justify-content: start;
+            align-items: center; 
         }
 
         #menuBar{
             height: 100%;
             width: 70%;
         
-            margin: 10pt;
+            margin: 0 6% 0 0;
+            margin-right: max(10pt);
             border: 0pt;
             padding: 0pt;
 
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: center;   
         }
+            .menu{
+                margin: 0 5%;
+                border: 0pt;
+                padding: 0pt;
+            }
 
         #loginBar{
             height: 100%;
-            width: 16%;
+            width: 15%;
+            min-width: 80pt;
         
             margin: 0pt;
             border: 0pt;
             padding: 0pt;
 
             display: flex;
-            justify-content: center;
+            justify-content: right;
             align-items: center;
-        }
-            #cadastarBotao{
-                height: 100%;
-                width: 50%;
-
-                margin: 0pt;
-                border: 0pt;
-                padding: 0pt;
-
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                background-color: transparent;
-
-                text-align: center;
-                
-            }
-            #loginBotao{
-                height: 100%;
-                width: 50%;
-
-                margin: 0pt;
-                border: 0pt;
-                padding: 0pt;
-                
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                background:transparent;
-
-                text-align: center;
-            }
         
+        }
+        #loginBarBotao{
+            height: 80%;
+            width: 80%;
+            min-width: 50pt;
+
+            margin: 0pt;
+            border: 0pt;
+            border-radius: 5pt;
+            padding: 3pt;
+            
+
+            color: #292316;
+            background-color: #B2C29E;
+            font-size: large;
+        }
+        #loginBarBotao:hover{
+            background-color: #4F8210;
+            color: #FFF7B0;
+
+        }
+
 #mid{
     height: 80%;
     width: 100%;
@@ -156,7 +192,6 @@ div{
         align-items: center;
         
         background-image: url("img/layered-peaks-haikei.svg");
-        mix-blend-mode: luminosity;
         
         background-repeat: no-repeat;
         background-size: 100%;
@@ -168,7 +203,7 @@ div{
         
             margin: 0pt;
             border: 5pt;
-            border-radius: 25pt;
+            border-radius: 10pt;
             padding: 0pt;
     
             display: flex;
@@ -176,50 +211,49 @@ div{
             align-items: center;
             flex-direction: column;
             
-
-            background: rgba( 27, 105, 109, 0.25);
-            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-            backdrop-filter: blur( 5px );
-            -webkit-backdrop-filter: blur( 5px );
-            box-shadow: 0px 20px 50px 10px rgba(0,0,0,0.2);
+            background: rgba(33, 147, 153, 0.3);
+            box-shadow: 0 0 50px 0 rgba( 31, 38, 135, 0.4 );
+            backdrop-filter: blur( 4px );
+            -webkit-backdrop-filter: blur( 3px );
+            box-shadow: 0px 0 50px 0 rgba(0,0,0,0.2);
         }
             #cadastrar{
-                height: 30pt;
-                width: 320pt;
+                height: 35pt;
+                width: 82%;
+                min-width: 300pt;
 
-                margin: 10pt;
+                margin: 15pt;
                 border: 0pt;
-                border-radius: 25pt;
+                border-radius: 10pt;
                 padding: 0pt;
 
+                font-size: large;
+                background-color: #C8CEAE;
+                
             }
 
             #cadastrar:hover{
-                background-color:  rgba( 27, 105, 109, 0.25);
-            }
-
-            .inpCadastro{
-                height: 30pt;
-                width: 80%;
-                min-width: 300pt;
-
-                margin: 10pt;
-                border: 0pt;
-                border-radius: 25pt;
-                padding: 0pt;
-
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                text-align: center;
-                font-size: 16pts;
+                background-color: #406b0b;
+                color: #FFF7B0;
             }
                 .inputGroup{
-                  
+                    height: 30pt;
+                    width: 70%;
+                    min-width: 300pt;
+                    
+                    margin: 15pt;
+                    border: 0px;
+                    border-radius: 10pt;
+                    padding: 0pt;
+
                     position: relative;
 
-                 
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    text-align: center;
+                    font-size: 16pts;
 
                 }
                 .input {
@@ -227,33 +261,38 @@ div{
                     width: 80%;
                     min-width: 300pt;
 
-                    padding: 10px;
-                    border: 10px;
-                    border-radius: 25px;
-                    color: skyblue;
-                    background-color: white ;
+                    padding: 16px;
+                    border: solid  1px;
+                    border-radius: 10px;
+                    border-color: #ACECEF;
+                  
+                    background-color: rgba(14, 83, 85, 0.1) ;
                     outline: 5px ;
                     
-                    
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    font-size: 15pt;            
                 }
                 .inputLabel{
-                   
+                    z-index: -1;
                     position: absolute;
                     top: 0;
                     left: 0;
-                    transform: translate(10px, 10px);
-                    transition: transform .25s;
+                    transform: translate(1px, 10px);
+                    transition: transform .4s;
                 }
                 .input:focus+.inputLabel,
                 .input:valid+.inputLabel{
                     transform: 
-                    translate(10px, -20px) scale(0.8);
-                    color: aqua;
+                    translate(1px, -25px) scale(0.8);
+                    color: rgb(29, 92, 92);
                     padding-inline: 0px;
                     background-color: transparent;
                 }
                 .input:is(:focus, :valid){
-                    outline-color: rgb(14, 10, 6);
+                    outline-color: rgb(246, 248, 125);
                 }
 
             
@@ -266,5 +305,11 @@ div{
     padding: 0pt;  
 
     background-color: #0b3133;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 15pt; 
 
 }

@@ -13,8 +13,14 @@
         <div name="top" id="top">
             <div name="bar" id="bar">
                 <div name="logoBar" id="logoBar"><h1> T </h1></div>
-                <div name="menuBar" id="menuBar"> menu menu menu</div>
-                <div name="loginBar" id="loginBar"> login </div>
+                    <div name="menuBar" id="menuBar">
+                        <p1 class="menu">CONHECER</p1>
+                        <p1 class="menu">PROPOSTA</p1>
+                        <p1 class="menu">CADASTRO</p1>
+                    </div>
+                <div name="loginBar" id="loginBar"> 
+                    <button id="loginBarBotao"> Login </button> 
+                </div>
             </div>
         </div>
 
@@ -22,33 +28,46 @@
             <div name="imgMidFundo" id="imgMidFundo">
                 <div name="abaMid" id="abaMid">
                     
-                    <div name="textoMid" id="textoMid"> Bem vindo ao cadastro do ADM </div>
+                    <div name="textoMid" id="textoMid">
+                        <h2>BEM VINDO AO CADASTRO DE ADM</h2>
+                    </div>
 
-                        <div class="inputGroup">
-                            <input type="text" id="nome" required class="input">
-                            <label for="nome" class="inputLabel">Nome de usuario</label>
-                        </div>
-                        <div class="inputGroup">
-                            <input type="text" id="nome" required class="input">
-                            <label for="nome" class="inputLabel">Nome de usuario</label>
-                        </div>
-                        <div class="inputGroup">
-                            <input type="text" id="nome" required class="input">
-                            <label for="nome" class="inputLabel">Nome de usuario</label>
-                        </div>
+                    <div class="inputGroup"> 
+                        <!-- input nome do usuario adm (secretariado) -->
+                        <input name="inputMovi" type="text" id="inputNomeADM" required class="input">
+                        <label for="inputMovi" class="inputLabel">Nome de Usuario</label>
+                    </div>
 
-                    <!-- 
-                    <label>senha</label><input class="inpCadastro" id="inptSenha" type="text">
-                    <label>confirmar senha</label><input class="inpCadastro" id="inptUsuario" type="text">
-                    -->
-                    <button id="cadastrar" onclick="cadastrar()" > CADASTRAR-SE </button>
+                    <div class="inputGroup">
+                        <!-- input senha do usuario adm (secretariado) -->
+                        <input  name="inputMovi" type="text" id="inputSenhaADM" required class="input">
+                        <label for="inputMovi" class="inputLabel">Senha</label>
+                    </div>
+
+                    <div class="inputGroup">
+                        <!-- input repita senha do usuario adm (secretariado) -->
+                        <input name="inputMovi" type="text" id="inputRepitaSenhaADM" required class="input">
+                        <label for="inputMovi" class="inputLabel">Repita a Senha</label>
+                    </div>
+                  
+                    <button id="cadastrar" onclick="cadastrar()" >
+                         CADASTRAR-SE 
+                    </button>
 
                 </div>
             </div>
         </div>
 
         <div name="bot" id="bot">
-            <div name="textoBot" id="textoBot"> logo </div>
+            <div name="textoBot" id="textoBot">  
+                <p1>
+                    ARTHUR CORVALHAO<br>
+                    JEFFERSON CUNHA<br>
+                    LUIGI SANTOS<br>
+                    MARINA MULLER<br>
+                    PEDRO<br>
+                </p1>
+            </div>
 
 
         </div>
