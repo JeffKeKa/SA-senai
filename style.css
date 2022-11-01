@@ -295,6 +295,50 @@ h2{
                     outline-color: rgb(246, 248, 125);
                 }
 
+        #abaDireita{
+            height: 80%;
+            width: 20%;
+        
+            margin: 1%;
+            border: 5pt;
+            border-radius: 10pt;
+            padding: 0pt;
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+            background: rgba(33, 147, 153, 0.6);
+            box-shadow: 0 0 50px 0 rgba( 31, 38, 135, 0.4 );
+            backdrop-filter: blur( 4px );
+            -webkit-backdrop-filter: blur( 3px );
+            box-shadow: 0px 0 50px 0 rgba(0,0,0,0.2);
+
+        }
+
+        #abaEsquerda{
+            height: 80%;
+            width: 75%;
+        
+            margin: 0pt;
+            border: 5pt;
+            border-radius: 10pt;
+            padding: 0pt;
+    
+            display: grid 2, 2;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+            background: rgba(33, 147, 153, 0.6);
+            box-shadow: 0 0 50px 0 rgba( 31, 38, 135, 0.4 );
+            backdrop-filter: blur( 4px );
+            -webkit-backdrop-filter: blur( 3px );
+            box-shadow: 0px 0 50px 0 rgba(0,0,0,0.2);
+
+        }
+
             
 #bot{
     height: 20%;
