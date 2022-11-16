@@ -27,7 +27,9 @@
         <div name="mid" id="mid">
             <div name="imgMidFundo" id="imgMidFundo">
                 <div name="abaDireita" id="abaDireita">
+                    
                     <div id="clock"></div>
+
                     <div>adicionar</div>
                     <div>contatos</div>
                     <div> outra coisa</div>
@@ -38,10 +40,11 @@
                 <div id="abaEsquerda" name="abaEsquerda">
                     <div class="abaEsquerdaTop">
                         
-                        <div>
-                            <p> foto </p>
+                        <div class="fotoPerfilDiv">
+                            <img class="fotoPerfil" src="img/human-man-5-svgrepo-com.svg" alt="foto de perfil">
+                            
                         </div>
-                        <div>
+                        <div class="apresentacaoPrtfilDiv">
 
                             <p> nomes </p>
                             <p> apresentação </p>
@@ -51,17 +54,13 @@
                    </div>
 
                    <div class="abaEsquerdaMid">
-                        <button> localizar </button>
-                        <button> localizar </button>
-                        <button> localizar </button>
-
+                        <button class="buttonMapLocal"> <div> <img class="imgMapLocal" src="img/arrow-direction-down-svgrepo-com.svg" alt="local mapa"> </div> <div>Localizar</div> </button>
+                        
+                        <button class="buttonMapLocal"> Documentação </button>
+                        <button class="buttonMapLocal"> Horarios </button>
+                        <button class="buttonMapLocal"> Atribuições </button>
                    </div>
 
-                   <div class="abaEsquerdaBot">
-
-                        <button> localizar </button>
-
-                   </div>
 
                 </div>
             
@@ -83,6 +82,9 @@
         </div>
 
     </site>
+
     <script src="scripts.js"></script>
+    <script src="scripts/relogio.js"></script>
+    
 </body>
 </html>
