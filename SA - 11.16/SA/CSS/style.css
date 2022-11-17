@@ -34,7 +34,7 @@ body {
 }
 
 ::-webkit-scrollbar{
-    width: 3pt;
+    width: 10pt;
 }
 ::-webkit-scrollbar-track{
     background-color: #35A8AE;
@@ -42,8 +42,6 @@ body {
 ::-webkit-scrollbar-thumb{
     background-color: #61d8df;
 }
-
-
 
 h2{
     margin: 5pt;
@@ -63,9 +61,6 @@ h2{
     padding: 0pt;
 
     text-align: center;
-    
-    
-
 }
 
 #top{
@@ -227,7 +222,7 @@ h2{
             border-radius: 10pt;
             padding: 0pt;
     
-            display: flex;
+            display: none;
             justify-content: center;
             align-items: center;
             flex-direction: column;
