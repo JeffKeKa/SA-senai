@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRACKTECH</title>
+
+    
+    <link href="../CSS/style.css" rel="stylesheet" title="Default Style" />
+    <link href="../CSS/styleTop.css" rel="stylesheet" title="Default Style" />
+    <link href="../CSS/styleMid.css" rel="stylesheet" title="Default Style" />
+    <link href="../CSS/styleBot.css" rel="stylesheet" title="Default Style" />
+
+</head>
+<body>
+<site>
+
+<!-- barra superior -->
+    <div name="Top" id="Top" class="Top">
+        <div name="Bar" id="Bar" class="Bar">
+
+            <!-- LOGO DA TRACK TECH -->
+            <div name="LogoBar" id="LogoBar" class="LogBoar">
+                <button name="PropostaBotaoBar" id="PropostaBotaoBar" class="BotaoLogoBar"> TT </button>
+            </div>
+
+           <!-- LOGO DA TRACK TECH -->
+            <div name="VazioBar" id="VazioBar" class="VazioBar">
+                
+            </div>
+            
+           <!-- MENU NA BARRA -->
+            <div name="MenuBar" id="MenuBar" class="MenuBar"> 
+
+                <button id="PropostaBotaoBar" class="BotaoBar"> PROPOSTA </button>
+                <button id="CadastroBotaoBar" class="BotaoBar"> CADASTRO </button> 
+                <button id="LoginBotaoBar" class="BotaoBar"> LOGIN </button> 
+
+            </div>
+
+        </div>
+    </div>
+<!-- ----------------------------------------------------------------------------------- -->
+
+<!-- barra conteudo do site -->
+    <div name="mid" id="mid">
+        <div name="imgMidFundo" id="imgMidFundo">
+            <div name="abaMidNome" id="abaMidLogin" class="abaMidLogin">
+                
+    <!-- aba de LOGIN -->
+                <div id="textoMid" class="textoDoMid" name="midTexto">
+                    <h2>BEM VINDO !</h2>
+                </div>
+
+                <div class="inputGroup"> 
+                    <!-- input nome do usuario adm (secretariado) -->
+                    <input name="inputMovi" type="text" id="inputNomeADM" required class="input">
+                    <label for="inputMovi" class="inputLabel">Nome de Usuario</label>
+                </div>
+
+                <div class="inputGroup">
+                    <!-- input senha do usuario adm (secretariado) -->
+                    <input  name="inputMovi" type="text" id="inputSenhaADM" required class="input">
+                    <label for="inputMovi" class="inputLabel">Senha</label>
+                </div>
+
+                <button id="cadastrar" class="" onclick="cadastrar()" >
+                     Login
+                </button>
+
+                <H1>LOGIN</H1>
+                <a href="#" onclick="TrocaDiv();"><label>Cadastre-se</label></a>
+
+            </div>
+    <!-- ----------------------------------------------------------------------- -->
+
+
+    <!-- aba de Cadastro -->
+            <div name="abaMidNome" id="abaMidCadastro" class="abaMidCadastro">
+                
+                <div name="textoMid" id="textoMid">
+                    <h2>BEM VINDO AO CADASTRO DE ADM</h2>
+                </div>
+
+                <div class="inputGroup"> 
+                    <!-- input nome do usuario adm (secretariado) -->
+                    <input id="inputNomeADM" s name="inputMovi" type="text"  required class="input">
+                    <label for="inputMovi" class="inputLabel">Nome de Usuario</label>
+                </div>
+
+                
+
+                <div class="inputGroup">
+                    <!-- input senha do usuario adm (secretariado) -->
+                    <input id="inputSenhaADM" name="inputMovi" type="text" required class="input">
+                    <label for="inputMovi" class="inputLabel">Senha</label>
+                </div>
+
+                <div class="inputGroup">
+                    <!-- input repita senha do usuario adm (secretariado) -->
+                    <input name="inputMovi" type="text" id="inputRepitaSenhaADM" required class="input">
+                    <label for="inputMovi" class="inputLabel">Repita a Senha</label>
+                </div>
+              
+                <button id="cadastrar" onclick="cadastrar()" >
+                     CADASTRAR-SE 
+                </button>
+                
+                <H1>CADASTRO</H1>
+                <a href="#" onclick="TrocaDiv();"><label>Possuo conta!</label></a>
+            </div>
+     <!-- ----------------------------------------------------------------------- -->
+        </div>
+    </div>
+<!-- ----------------------------------------------------------------------------------- -->
+
+
+<!-- roda pé do site -->
+<div name="bot" id="bot" class="bot">
+    <div name="textoBot" id="textoBot" class="textoBot">
+
+        <h1>SOBRE</h1>
+        <a1 href="">História</a1><br>
+        <a1 href="">Nosso Time</a1><br>
+        <a1 href="">Termos e Condições</a1><br>
+        <a1 href="">Politica de Privacidade</a1><br>
+
+    </div>
+
+    <div name="BotDivisor" id="BotDivisor" class="BotDivisor">
+
+    </div>
+
+    <div name="LogoBot" id="LogoBot" class="LogoBot">
+
+    </div>
+</div>
+
+<div name="BotDiv" id="BotDiv" class="BotDiv">
+
+    <div name="Historia" id="Historia" class="Historia">  
+
+    </div>
+
+    <div name="NossoTime" id="NossoTime" class="NossoTime">  
+
+    </div>
+
+    <div name="TermosECondicoes" id="TermosECondicoes" class="TermosECondicoes">  
+
+    </div>
+
+    <div name="PoliticaDePrivacidade" id="PoliticaDePrivacidade" class="PoliticaDePrivacidade">  
+
+    </div>
+</div>
+<!-- ----------------------------------------------------------------------------------- -->
+
+</site>
+    <script src="../LÓGICA/02-CADASTRO.JS"></script>
+    <script src="../LÓGICA/03-LOGIN.JS"></script>
+</body>
+</html>
