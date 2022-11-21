@@ -8,7 +8,7 @@ Adafruit_LiquidCrystal lcd_1(0);
 #define RST_PIN 9
 MFRC522 mfrc522(SS_PIN, RST_PIN);   // Create MFRC522 instance.
  
-//LiquidCrystal lcd(6, 7, 5, 4, 3, 2); 
+ 
  
 char st[20];
  
@@ -77,9 +77,7 @@ void loop()
     digitalWrite(3, 0);
     delay(100);
     lcd_1.clear();
-    lcd_1.print(" OLA USUARIO");  
-    lcd_1.setCursor(0,1);
-    lcd_1.print("09 3D AD 98");
+    lcd_1.print(" NAO CADASTRADO");  
   }
 } 
  
