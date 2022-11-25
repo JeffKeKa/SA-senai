@@ -1,0 +1,128 @@
+.Top{
+    position: fixed;
+    z-index: +1;
+
+    height: 7%;
+    min-height: 25pt;
+    width: 100%;
+
+    margin: 0pt;
+    border: 0pt;
+    padding: 0pt;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Bar{
+    height: 45pt;
+    width: 100%;
+
+    margin: 0pt;
+    border: 0pt;
+    padding: 10pt 5pt 0pt 0pt;
+
+    background:  rgba(0, 26, 27, 0.9);
+    box-shadow: 0 10pt 15pt 0 rgba( 31, 38, 135, 0.8 );
+    backdrop-filter: blur( 2pt );
+    -webkit-backdrop-filter: blur( 1px );
+    box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.VazioBar{
+    height: 100%;
+    width: 80%;
+}
+
+.MenuBar{
+    height: 100%;
+    width: 0;
+    min-width: 80pt;
+
+    margin: 0;
+    border: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.CadastroBotaoBar, .LoginBotaoBar{
+    height: 35pt;
+    width: 200pt;
+    min-width: 90pt;
+
+    margin: 3pt;
+    border: 0;
+    border-radius: 5pt;
+    padding: 3pt;
+}
+
+.CadastroBotaoBar{
+    color: #FFF7B0;
+    background-color: transparent;
+    font-size: large;
+}
+
+.LoginBotaoBar{   
+    color: #FFF7B0;
+    background-color: #35A8AE;
+    font-size: large;
+}
+    .CadastroBotaoBar, .LoginBotaoBar:active{
+        transform: scale(0.98);
+        /* Scaling button to 0.98 to its original size */
+        box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.25);
+        /* Lowering the shadow */
+    }
+
+    .CadastroBotaoBar:hover{
+        background-color: #5A6B45;
+        color: #FFF7B0;
+    }
+
+    .LoginBotaoBar:hover{
+        background-color: #5A6B45;
+        color: #FFF7B0;
+    }
+
+.BotaoLogoBar{
+    height: 35pt;
+    width: 180pt;
+    
+
+    margin: 3pt;
+    border: 0pt;
+    border-radius: 10pt;
+    padding: 3pt;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: transparent;
+    background-color: transparent;
+    font-size: large;
+}
+    .BotaoLogoBar:hover{
+        background-color: transparent;
+        color: transparent;
+    }
+    .BotaoLogoBar:active{
+        transform: scale(0.95);
+        /* Scaling button to 0.98 to its original size */
+        box-shadow: 0px 1px 10px 1px rgba(3, 26, 34, 0.9);
+        /* Lowering the shadow */
+    }
+
+    .LogoImg{
+        height: 40pt;
+        width: 120pt;
+    }
+

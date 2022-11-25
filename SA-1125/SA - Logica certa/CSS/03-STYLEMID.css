@@ -1,0 +1,194 @@
+#textoMid {
+    /* parametros para o corpo do site */
+    height: 25pt;
+    width: 100%;
+/* altura e largura da pagina % do html*/
+    margin: 10pt;
+    border: 0pt;
+    padding: 0pt;
+
+    text-align: center;
+}
+.abaMidInicio{
+    height: 400pt;
+    width: 400pt;
+
+    margin: 0pt;
+    border: 0pt;
+    border-radius: 10pt;
+    padding: 0pt;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    background: rgba(33, 147, 153, 0.3);
+    box-shadow: 0 0 50px 0 rgba( 31, 38, 135, 0.5 );
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
+    box-shadow: 0px 0 50px 0 rgba(0,0,0,0.2);
+}
+.abaMidLogin{
+    height: 400pt;
+    width: 400pt;
+
+    margin: 0pt;
+    border: 0pt;
+    border-radius: 10pt;
+    padding: 0pt;
+    
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    background: rgba(33, 147, 153, 0.3);
+    box-shadow: 0 0 50px 0 rgba( 31, 38, 135, 0.5 );
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
+    box-shadow: 0px 0 50px 0 rgba(0,0,0,0.2);
+
+    animation: SSS 0.1s ease ;
+    /* animation-iteration-count: unset; */
+    
+}
+@keyframes SSS{
+
+0%{
+
+    height: 00pt;
+    width: 00pt;
+
+}
+100%{
+
+    height: 400pt;
+    width: 400pt;
+
+}
+
+}
+
+.abaMidCadastro{
+    height: 400pt;
+    width: 400pt;
+
+    margin: 0pt;
+    border: 0pt;
+    border-radius: 10pt;
+    padding: 0pt;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    background: rgba(33, 147, 153, 0.3);
+    box-shadow: 0 0 50px 0 rgba( 31, 38, 135, 0.5 );
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 3px );
+    box-shadow: 0px 0 50px 0 rgba(0,0,0,0.2);
+    animation: SSS 0.1s ease ;
+}
+
+#mid{
+    height: 80%;
+    width: 100%;
+
+    margin: 0pt;
+    border: 0pt;
+    padding: 0pt; 
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cadastrar{
+height: 35pt;
+width: 82%;
+min-width: 300pt;
+
+margin: 15pt;
+border: 0pt;
+border-radius: 10pt;
+padding: 0pt;
+
+font-size: large;
+background-color: #406b0b;
+color: #FFF7B0;
+
+}
+
+#cadastrar:hover{
+background-color: #5A6B45;
+color: #FFF7B0;
+}
+.inputGroup{
+    height: 30pt;
+    width: 70%;
+    min-width: 300pt;
+    
+    margin: 15pt;
+    border: 0px;
+    border-radius: 10pt;
+    padding: 0pt;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 16pts;
+
+}
+.input {
+    height: 10pt;
+    width: 80%;
+    min-width: 300pt;
+
+    padding: 16px;
+    border: solid  1px;
+    border-radius: 10px;
+    border-color: #ACECEF;
+    
+    background-color: rgba(14, 83, 85, 0.1) ;
+    outline: 5px ;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 15pt;            
+}
+.inputLabel{
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(1px, 10px);
+    transition: transform .4s;
+}
+.input:focus+.inputLabel,
+.input:valid+.inputLabel{
+    transform: 
+    translate(1px, -25px) scale(0.8);
+    color: rgb(29, 92, 92);
+    padding-inline: 0px;
+    background-color: transparent;
+}
+.input:is(:focus, :valid){
+    outline-color: rgb(246, 248, 125);
+}
+
+.olho{
+    z-index: +1;
+    position: absolute;
+    right: -1%;
+    background: transparent;
+    border: 0;
+}
+
