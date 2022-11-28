@@ -1,0 +1,1 @@
+/* https://www.freepik.com/free-vector/employees-team-talking-laughing-free-time-coffee-break-office-workers-team-discussing-success-project-man-woman-working-place_13664399.htm#page=50&position=6&from_view=author */
