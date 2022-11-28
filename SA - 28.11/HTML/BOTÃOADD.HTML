@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- html cadastro do professor -->
+    <center>
+
+        <button id="ApareceDivCadastroProfessor">Cadastrar Professor</button><BR><BR>
+        <input id="InpNomeProfessor" placeholder="NOME COMPLETO" type="text"><BR><BR>
+        <input id="CPFProfessor" placeholder="CPF" type="text" ><BR></BR>
+        <input id="FotoProfessor" placeholder="foto" type="text" ><BR></BR>
+        <input id="InpCodigoProfessor" placeholder="CODIGO DE RASTREIO" type="text"><BR><BR>
+        <button onclick="CadastrarProfessor()" id="BotaoCadastroProfessor">Cadastre-se</button><BR><BR><BR><BR>
+        
+    </center>
+
+
+<!--- -------------------------------------------------------------------------------------------- -->
+<center>
+    <button id="ApareceDivExcluiProfessor">Excluir Professor</button><BR><BR>
+    <input id="InpPesquisaProfessor" placeholder="Digite o CPF do professor" type="text"><BR><BR>
+    <button onclick="ListaProfessor()" id="BotaoCadastroProfessor">PESQUISAR</button>
+    <button onclick="ExcluirProfessor()" id="BotaoCadastroProfessor">Excluir</button>
+</center>  
+
+
+<div id="Lista">
+
+
+</div >
+
+<script src="../LÓGICA/04-SISTEMA.JS"></script>
+</body>
+</html>
+
