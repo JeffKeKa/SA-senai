@@ -4,11 +4,18 @@ let apareceDivProfessor = document.getElementById("ApareceDivCadastroProfessor")
 let cadastro = document.getElementById("InpNomeProfessor")
 let VarCpf = document.getElementById("CPFProfessor")
 let codigo = document.getElementById("InpCodigoProfessor")
+let foto = document.getElementById("FotoProfessor")
 
 /*-------------------------------------------------------------------------------------*/
 
 let excluir = document.getElementById("InpPesquisaProfessor")
 let pesquisa = document.getElementById("InpPesquisaProfessor")
+let editar = document.getElementById("InpEditaProfessor")
+
+let nomeEditar = document.getElementById("InpEditaNome")
+let cpfEditar = document.getElementById("InpEditaCpf")
+let codigoEditar = document.getElementById("InpEditaCodigo")
+let fotoEditar = document.getElementById("InpEditaFoto")
 
 
 
@@ -22,13 +29,15 @@ function CadastrarProfessor(){
 
         nome: '',
         cpf: '',
-        rastreio: ''
+        rastreio: '',
+        foto: ''
        
     }
 
     professor.nome = cadastro.value
     professor.rastreio = codigo.value
     professor.cpf = VarCpf.value
+    professor.foto = foto.value 
    
     vetorUsers = JSON.parse(localStorage.getItem('professoresSalvo'))
     
@@ -106,7 +115,7 @@ function ExcluirProfessor(){
     }
     if(ContagemExcluir == 0){
 
-        alert("O nome que você digitou não existe!")
+        alert("O nome digitado não existe!")
 
     }
 
@@ -152,21 +161,59 @@ function ListaProfessor(){
 
 }
 
+function EnterEditar(){
 
+    vetorUsers = JSON.parse(localStorage.getItem('professoresSalvo'))
 
+    let ContagemEnter = 0
 
+    for(i=0; i < vetorUsers.length; i++){
+        
+        if(editar.value == vetorUsers[i].cpf){
+            
+            ContagemEnter = 1
+            nomeEditar.value = vetorUsers[i].nome
+            cpfEditar.value =vetorUsers[i].cpf
+            codigoEditar.value = vetorUsers[i].rastreio
+            fotoEditar.value=vetorUsers[i].foto
+            
+        }
 
+    }  
 
+    if(ContagemEnter == 0){
 
+        alert("O CPF digitado não existe!")
 
+    }
+    
+}
 
+function EditarProfessor(){
 
+    vetorUsers = JSON.parse(localStorage.getItem('professoresSalvo'))
+    let ContagemEditar = 0
 
+    for(i=0; i < vetorUsers.length; i++){
 
+        if(editar.value == vetorUsers[i].cpf){
+            ContagemEditar = 1
+            vetorUsers[i].nome = nomeEditar.value
+            vetorUsers[i].cpf = cpfEditar.value
+            vetorUsers[i].rastreio =codigoEditar.value
+            vetorUsers[i].foto =fotoEditar.value
+            alert("Editado")
+        }
+    }
 
+    if(ContagemEditar == 0){
 
+        alert("O CPF digitado não existe!")
 
-
+    }
+    localStorage.setItem('professoresSalvo', JSON.stringify(vetorUsers))
+}
+    
 
 
 
