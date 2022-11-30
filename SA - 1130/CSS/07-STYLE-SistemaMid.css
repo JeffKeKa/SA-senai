@@ -1,0 +1,321 @@
+.imgMidFundo{
+    height: 100%;
+    width: 100%;
+
+    margin: 0pt;
+    border: 0pt;
+    padding: 0pt;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(-30deg, rgb(14, 101, 105), rgb(209, 245, 247));
+
+    background-repeat: no-repeat;
+    background-size: 300%;
+
+    animation: AnimationFundo 10s ease infinite;
+}
+@keyframes AnimationFundo{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+.mid{
+    height: 75%;
+    width: 100%;
+
+    margin: 0pt;
+    border: 0pt;
+    padding: 0pt; 
+    
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;   
+}
+
+.abaEsquerda{
+    height: 85%;
+    width: 20%;
+    min-width: 170pt;
+
+    margin: 40pt 5pt 0 0;
+    border: 0;
+    border-radius: 10pt;
+    padding: 0pt;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    background: rgba(33, 147, 153, 0.6);
+    box-shadow: 0 0 50px 0 rgba( 31, 38, 135, 0.4 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 3px );
+    box-shadow: 0px 0 50px 0 rgba(0,0,0,0.2);
+
+}
+
+.abaDireita{
+    height: 85%;
+    width: 76%;
+    min-width: 100pt;
+
+    margin: 40pt 0 5pt 0;
+    border: 0;
+    border-radius: 10pt;
+    padding: 0pt;
+
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+
+}
+
+#DivCadastroProfessor{
+    display: none;
+}
+
+#DivEditaProfessor{
+    display: none;
+}
+
+#DivExcluiProfessor{
+    display: none;
+} 
+
+
+.abaDireitaTop{
+    height: 100%;
+    width: 25%;
+    min-width: 130pt;
+
+
+    margin: 0pt 5pt 0 0;
+    border: 0;
+    border-radius: 10pt;
+    padding: 0pt;
+
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+   
+    background: rgba(33, 147, 153, 0.6);
+    box-shadow: 0 0 50px 0 rgba( 31, 38, 135, 0.4 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 3px );
+    box-shadow: 0px 0 50px 0 rgba(0,0,0,0.2);
+}
+
+.fotoPerfil {
+    height: 8rem;
+    width: 8rem;
+
+    margin: 20pt 0 0 0;
+    border: 5pt;
+    border-radius: 50%;
+    padding: 0pt;
+
+    background-color: #35878b;
+    
+}
+
+.abaDireitaMapa{
+    height: 100%;
+    width: 74%;
+    min-width: 200pt;
+
+
+    margin: 0pt 0 0 0pt;
+    border: 5pt;
+    border-radius: 10pt;
+    padding: 0pt;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+    background: rgba(33, 147, 153, 0.6);
+    box-shadow: 0 0 50px 0 rgba( 31, 38, 135, 0.4 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 3px );
+    box-shadow: 0px 0 50px 0 rgba(0,0,0,0.2);
+}
+
+.imgMapLocal{
+    height: 1.5rem;
+    width: 2rem;
+
+    margin: 0rem 0.5rem 0rem 0rem;
+    border: 0pt;
+    border-radius: 30%;
+    padding: 0pt;
+
+    background-color: #35878b;
+
+}
+
+.buttonMapLocal{
+    height: 32pt;
+    width: 80%;
+    
+    margin: 10pt 0pt 0pt 1pt;
+    border: 0pt;
+    border-radius: 5pt;
+    padding: 5pt;
+    
+    display: flex;
+    justify-content: left   ;
+    align-items: center;
+    flex-direction: row;
+
+    color: #FFF7B0;
+    background-color: #35878b;
+    font-size: large;
+    
+}
+
+.buttonMapLocal:hover{
+    background-color: #0b3133;
+    color: #FFF7B0;
+
+}
+
+.fotoMapa {
+    height: 30rem;
+    width: 40rem;
+
+    max-height: 75%;
+    max-width: 90%;
+
+    margin: 30pt 5pt;
+    border: 5pt;
+    border-radius: 10pt;
+    padding: 0pt;
+
+    background-color: #35878b;
+    
+}
+
+.inputGroup{
+    height: 25pt;
+    width: 80%;
+    min-width: 100pt;
+    
+    margin: 25pt 0 0 0;
+    border: 0px;
+    border-radius: 0pt;
+    padding: 0pt;
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 12pts;
+
+    position: relative;
+
+}
+.input {
+    height: 9pt;
+    width: 95%;
+    min-width: 100pt;
+    
+    padding: 16px;
+    border: solid  1px;
+    border-radius: 10px;
+    border-color: #ACECEF;
+    
+    background-color: rgba(14, 83, 85, 0.1);
+    outline: 1px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-size: 14pt;            
+}
+.inputLabel{
+    z-index: -1;
+    position: absolute;
+    top: -1pt;
+    left: 5pt;
+    transform: translate(-5pt, 10pt);
+    transition: transform .4s;
+
+    
+}
+.input:focus+.inputLabel,
+.input:valid+.inputLabel{
+    transform: 
+    translate(-11px, -25px) scale(1);
+    color: #FFF7B0;
+    padding-inline: 0px;
+    background-color: transparent;
+    font-size: 9pt;
+}
+.input:is(:focus, :valid){
+    outline-color: #FFF7B0;
+}
+
+
+
+
+.LogarCadastrar{
+    height: 35pt;
+    width: 90%;
+    min-width: 100pt;
+    
+    margin: 15pt 0 0 0;
+    border: 0pt;
+    border-radius: 10pt;
+    padding: 0pt;
+    
+    font-size: large;
+    background-color: rgba(0,0,0,0.2);
+    color: #FFF7B0;
+    
+    }
+    
+    .LogarCadastrar:hover{
+    background-color: rgba(0,0,0,0.6);
+    color: #FFF7B0;
+    }
+
+    
+.sala01{
+    height: 10%;
+    width: 50%;
+    background-color: red;
+}
+.sala02{
+    height: 10%;
+    width: 50%;
+    background-color: rgb(165, 165, 165);
+
+}
+.sala03{
+    height: 10%;
+    width: 50%;
+    background-color: rgb(0, 0, 0);
+
+}
+.sala04{
+    height: 10%;
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+
+}

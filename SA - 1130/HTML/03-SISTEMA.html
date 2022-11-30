@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SISTEMA TRACKTECH</title>
+
+    <link href="../CSS/05-STYLE-Sistema.css" rel="stylesheet" title="Default Style"/>
+    <link href="../CSS/06-STYLE-SistemaTop.css" rel="stylesheet" title="Default Style"/>
+    <link href="../CSS/07-STYLE-SistemaMid.css" rel="stylesheet" title="Default Style"/>
+    <link href="../CSS/08-STYLE-SistemaBot.css" rel="stylesheet" title="Default Style"/>
+
+</head>
+
+<body>
+<site>
+
+<!-- barra superior -->
+<div name="Top" id="Top" class="Top">
+    <div name="Bar" id="Bar" class="Bar">
+
+        <!-- LOGO DA TRACK TECH -->
+        <div name="LogoBar" id="LogoBar" class="LogBoar">
+            <button onclick="BotaoInicio()" name="PropostaBotaoBar" id="PropostaBotaoBar" class="BotaoLogoBar"> <img src="../IMAGENS/TRACKING-TECH-IMG-TEXTO.svg" alt="LogoImg" class="LogoImg"> </button>
+        </div>
+
+        <div name="VazioBar" id="VazioBar" class="VazioBar"></div>
+        
+       <!-- MENU NA BARRA -->
+        <div name="MenuBar" id="MenuBar" class="MenuBar"> 
+
+            <button onclick="BotaoLogin()" name="LogoutBotaoBar" id="LogoutBotaoBar" class="LogoutBotaoBar">LOGOUT</button> 
+
+        </div>
+
+    </div>
+</div>
+<!-- ----------------------------------------------------------------------------------- -->
+
+<!-- barra conteudo do site -->
+<div name="mid" id="mid" class="mid">
+    <div name="imgMidFundo" id="imgMidFundo" class="imgMidFundo">
+
+        <div name="abaEsquerda" id="abaEsquerda" class="abaEsquerda">
+
+            <button onclick="ApareceCadastrarProfessor()"  class="buttonMapLocal"> <div> <img class="imgMapLocal" src="../IMAGENS/HOMEM.svg" alt="local mapa"> </div>Cadastrar Professor</button>
+
+            <button onclick="ApareceEditarProfessor()" class="buttonMapLocal"> <div> <img class="imgMapLocal" src="../IMAGENS/SINO-ALERTA.svg" alt="local mapa"> </div>Editar Professor</button>
+
+            <button onclick="ApareceExcluirProfessor()" class="buttonMapLocal"> <div> <img class="imgMapLocal" src="../IMAGENS/SINO-ALERTA.svg" alt="local mapa"> </div>Excluir Professor</button>
+            
+            <button class="buttonMapLocal"> <div> <img class="imgMapLocal" src="../IMAGENS/MAPA-INDICADOR.svg" alt="local mapa"> </div> <div>Localizar</div> </button>
+
+            <button class="buttonMapLocal"> <div> <img class="imgMapLocal" src="../IMAGENS/MALETA.svg" alt="local mapa"> </div> Documentação</button>
+            
+            <button class="buttonMapLocal"> <div> <img class="imgMapLocal" src="../IMAGENS/CALENDARIO.svg" alt="local mapa"> </div> Horarios</button>
+            
+            <button class="buttonMapLocal"> <div> <img class="imgMapLocal" src="../IMAGENS/SINO-ALERTA.svg" alt="local mapa"> </div>Atribuições</button>
+
+        </div>
+
+
+        <div id="abaDireita" name="abaDireita" class="abaDireita">
+            <div id="DivCadastroProfessor" class="abaDireitaTop">
+
+                <div class="fotoPerfilDiv">
+                    <img class="fotoPerfil" src="../IMAGENS/MULHER.svg" alt="foto de perfil">
+
+                </div>
+
+                <div class="inputGroup"> 
+                <!-- input nome do usuario adm (secretariado) -->
+                <input name="inputMovi" type="text" id="InpNomeProfessor" required class="input" autocomplete="false">
+                <label for="inputMovi" class="inputLabel">Nome Completo</label>
+                </div>
+
+                <div class="inputGroup"> 
+                    <!-- input nome do usuario adm (secretariado) -->
+                    <input name="inputMovi" type="text" id="CPFProfessor" required class="input" autocomplete="off">
+                    <label for="inputMovi" class="inputLabel">CPF</label>
+                </div>
+                
+                <div class="inputGroup"> 
+                    <!-- input nome do usuario adm (secretariado) -->
+                    <input name="inputMovi" type="text" id="FotoProfessor" required class="input" autocomplete="off">
+                    <label for="inputMovi" class="inputLabel">FOTO</label>
+                </div>
+
+                <div class="inputGroup"> 
+                    <!-- input nome do usuario adm (secretariado) -->
+                    <input name="inputMovi" type="text" id="InpCodigoProfessor" required class="input" autocomplete="off">
+                    <label for="inputMovi" class="inputLabel">CODIGO</label>
+                </div>
+
+                <button id="" class="LogarCadastrar" onclick="CadastrarProfessor()" >Cadastar</button>
+
+            </div>
+
+
+<!-- excluir professor -->
+            <div id="DivExcluiProfessor" class="abaDireitaTop">
+
+                <div class="inputGroup"> 
+                    <!-- input nome do usuario adm (secretariado) -->
+                    <input name="inputMovi" type="text" id="InpPesquisaProfessor" required class="input" autocomplete="off">
+                    <label for="inputMovi" class="inputLabel">CPF</label>
+                </div>
+
+                <button id="Logar" class="LogarCadastrar" onclick="ListaProfessor()" >Pesquisar</button>
+
+                <button id="Logar" class="LogarCadastrar" onclick="ExcluirProfessor()" >Excluir</button>
+
+                <div id="lista">
+
+                    <div id="Nome">
+
+
+                    </div >
+                    
+                    <div id="Cpf">
+                    
+                    
+                    </div >
+                    
+                    <div id="Codigo">
+                    
+                    
+                    </div >
+
+                </div >
+            </div>
+
+
+            <div id="DivEditaProfessor" class="abaDireitaTop">
+
+                <div class="inputGroup"> 
+                    <input name="inputMovi" type="text" id="InpEditaProfessor" required class="input" autocomplete="off">
+                    <label for="inputMovi" class="inputLabel">CPF</label>
+                </div>
+
+                <button id="BotaoEditarProfessor" class="LogarCadastrar" onclick="EnterEditar()">ENTER</button>
+
+                <div class="inputGroup"> 
+                    <input name="inputMovi" type="text" id="InpEditaNome" required class="input" autocomplete="off">
+                    <label for="inputMovi" class="inputLabel">Nome</label>
+                </div>
+
+                <div class="inputGroup"> 
+                    <input name="inputMovi" type="text" id="InpEditaCpf" required class="input" autocomplete="off">
+                    <label for="inputMovi" class="inputLabel">CPF</label>
+                </div>
+
+                <div class="inputGroup"> 
+                    <input name="inputMovi" type="text" id="InpEditaCodigo" required class="input" autocomplete="off">
+                    <label for="inputMovi" class="inputLabel">Codigo</label>
+                </div>
+
+                <div class="inputGroup"> 
+                    <input name="inputMovi" type="text" id="InpEditaFoto" required class="input" autocomplete="off">
+                    <label for="inputMovi" class="inputLabel">Foto</label>
+                </div>
+
+                <button id="BotaoEditarProfessor" class="LogarCadastrar" onclick="EditarProfessor()">Editar</button>
+
+
+                <div id="lista">
+                    <div id="Nome">
+
+
+                    </div >
+                    
+                    <div id="Cpf">
+                    
+                    
+                    </div >
+                    
+                    <div id="Codigo">
+
+                    
+                    </div >
+
+                </div >
+            </div>
+
+            
+
+            <div class="abaDireitaMapa">
+                
+                <div id="sala01" class="sala01">
+                    <h1>sala 01</h1>
+
+                </div>
+
+                <div id="sala02" class="sala02">
+                    <h1>sala 02</h1>
+                </div>
+
+                <div id="sala03" class="sala03">
+                    <h1>sala 03</h1>
+                </div>
+
+                <div id="sala04" class="sala04">
+                    <h1>sala 04</h1>
+                </div>
+                </div>
+
+                <div class="abaDireitaMapa">
+                
+                    <div class="sala01">
+                        <div id="Nome">
+                            nome
+
+                        </div >
+                    </div>
+    
+                    <div class="sala02">
+                        <div id="Cpf">
+                            cpf
+                    
+                        </div >
+                    </div>
+    
+                    <div class="sala03">
+                        <div id="Codigo">
+                            Codigo
+                        
+                        </div >
+                    </div>                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- roda pé do site -->
+<div name="bot" id="bot" class="bot">
+    <div name="textoBot" id="textoBot" class="textoBot">
+
+        <h5>SOBRE</h5>
+        <h5 href="">História</h5>
+        <h5 href="">Nosso Time</h5>
+        <h5 href="">Termos e Condições</h5>
+        <h5 href="">Politica de Privacidade</h5>
+
+    </div>
+
+    <div name="BotDivisor" id="BotDivisor" class="BotDivisor">
+
+    </div>
+
+    <div name="LogoBot" id="LogoBot" class="LogoBot">
+
+        <img class="LogoBotImg" src="../IMAGENS/TRACKING-TECH-IMG-TEXTO.svg" alt="Logo">
+
+    </div>
+</div>
+
+<div name="BotDiv" id="BotDiv" class="BotDiv">
+
+    <div name="Historia" id="Historia" class="Historia">  
+
+    </div>
+
+    <div name="NossoTime" id="NossoTime" class="NossoTime">  
+
+    </div>
+
+    <div name="TermosECondicoes" id="TermosECondicoes" class="TermosECondicoes">  
+
+    </div>
+
+    <div name="PoliticaDePrivacidade" id="PoliticaDePrivacidade" class="PoliticaDePrivacidade">  
+
+    </div>
+</div>
+<!-- ----------------------------------------------------------------------------------- -->
+
+    </site>
+
+    <script src="../LÓGICA/04-SISTEMA.JS"></script>
+    <script src="../LÓGICA/02-CADASTRO-LOGIN.JS"></script
+    
+</body>
+</html>

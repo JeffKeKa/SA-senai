@@ -1,0 +1,94 @@
+@font-face {
+    font-family: "Poppins";
+    src: url("fonts/Poppins-SemiBold.ttf") format("ttf");
+  }
+
+html, body{
+    font-family: Poppins;
+
+    width: 100%;
+
+    /* altura e largura da pagina % da tela */
+    margin: 0pt;
+    border: 0pt;
+    padding: 0pt;
+
+    background: #ACECEF;
+}
+
+html{
+    /* parametros para o html */
+    height: 130%; 
+}
+
+body {
+/* parametros para o corpo do site */
+    height: 100%;
+}
+
+::-webkit-scrollbar{
+    width: 10pt;
+}
+::-webkit-scrollbar-track{
+    background-color: #137c81;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #61d8df;
+    border-radius: 3pt;
+}
+
+/** ------------ */
+
+h1{
+    height: 10pt;
+    color: #031A22;
+}
+h2{
+    height: 10pt;
+    color: #1C282C;
+}
+h3{
+    height: 10pt;
+    color: #1A1408;
+}
+h4{
+    height: 10pt;
+    color: #292316;
+}
+h5{
+    height: 30pt;
+    width: 180pt;
+
+    color: #FFF7B0;
+
+    margin: 0pt;
+    border: 0pt;
+    padding: 0pt;
+
+    font-size: 14pt;
+
+    text-decoration: double;
+}
+h6{
+    height: 10pt;
+    width: 180pt;
+    height: 10pt;
+    color: #962a24;
+
+    text-decoration: double;
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4{
+    margin: 0pt;
+    border: 0pt;
+    padding: 0pt;
+
+    text-align: center;
+}
+
+.ALERTA{
+    position: relative;
+    top: 4pt;
+    zoom: 75%;
+}
