@@ -1,7 +1,3 @@
-let DivCadastrarProfessor = document.getElementById("DivCadastroProfessor")
-let DivEditarProfessor = document.getElementById("DivEditaProfessor")
-let DivExcluirProfessor = document.getElementById("DivExcluiProfessor")
-
 /*CADASTRO PROFESSOR*/
 
 let apareceDivProfessor = document.getElementById("ApareceDivCadastroProfessor")
@@ -14,15 +10,12 @@ let foto = document.getElementById("FotoProfessor")
 
 let excluir = document.getElementById("InpPesquisaProfessor")
 let pesquisa = document.getElementById("InpPesquisaProfessor")
-let Enter = document.getElementById("InpEditaProfessor")
 let editar = document.getElementById("InpEditaProfessor")
 
 let nomeEditar = document.getElementById("InpEditaNome")
 let cpfEditar = document.getElementById("InpEditaCpf")
 let codigoEditar = document.getElementById("InpEditaCodigo")
 let fotoEditar = document.getElementById("InpEditaFoto")
-
-let ExcluiInp = document.getElementById("InpPesquisaProfessor")
 
 
 
@@ -44,7 +37,7 @@ function CadastrarProfessor(){
     professor.nome = cadastro.value
     professor.rastreio = codigo.value
     professor.cpf = VarCpf.value
-    professor.foto = foto.value
+    professor.foto = foto.value 
    
     vetorUsers = JSON.parse(localStorage.getItem('professoresSalvo'))
     
@@ -62,7 +55,8 @@ function CadastrarProfessor(){
                vetorUsers.push(professor)
                localStorage.setItem('professoresSalvo', JSON.stringify(vetorUsers))
                alert("Cadastro realizado")
-               ApagaTudoCadastro()
+               LimparTudo()
+               TrocaDiv()
                
             }
                 
@@ -74,8 +68,8 @@ function CadastrarProfessor(){
 
                         alert("Login Já Existente")
                         flag = 1
-                        InpNomeProfessor.focus()
-                        ApagaNomeCadastro()
+                        LimparNome()
+                        InpUsuarioCadastro.focus()
                     
 
 
@@ -88,9 +82,11 @@ function CadastrarProfessor(){
                     vetorUsers.push(professor)
                     localStorage.setItem('professoresSalvo', JSON.stringify(vetorUsers))
                     alert("Cadastro realizado")
-                    ApagaTudoCadastro()
+                    TrocaDiv()
+                    InpUsuarioLogin.focus()
             
-                }          
+                }
+                        
             }                  
         }
     }     
@@ -111,7 +107,6 @@ function ExcluirProfessor(){
 
            vetorUsers.splice(i,1)
            alert("EXCLUIDO")
-           ApagaExcluir()
            ContagemExcluir = 1
            
         }
@@ -181,15 +176,14 @@ function EnterEditar(){
             cpfEditar.value =vetorUsers[i].cpf
             codigoEditar.value = vetorUsers[i].rastreio
             fotoEditar.value=vetorUsers[i].foto
-             
+            
         }
+
     }  
 
     if(ContagemEnter == 0){
 
         alert("O CPF digitado não existe!")
-        ApagaCpfEditar()
-        InpEditaProfessor.focus()
 
     }
     
@@ -209,7 +203,6 @@ function EditarProfessor(){
             vetorUsers[i].rastreio =codigoEditar.value
             vetorUsers[i].foto =fotoEditar.value
             alert("Editado")
-            ApagaTodosInpEdita()
         }
     }
 
@@ -221,75 +214,49 @@ function EditarProfessor(){
     localStorage.setItem('professoresSalvo', JSON.stringify(vetorUsers))
 }
 
-function ApareceCadastrarProfessor(){
+function BotãoListaProfessor(){
+    let vetorLista = []
+    
+    vetorUsers = JSON.parse(localStorage.getItem('professoresSalvo'))
+    let lista = ''
+    for(i=0; i<vetorUsers.length; i++){
 
-    DivCadastrarProfessor.style.display = "flex"
-    DivEditarProfessor.style.display = "none"
-    DivExcluirProfessor.style.display = "none"
-}
+        vetorLista.push(vetorUsers[i].nome)
 
-function ApareceEditarProfessor(){
+    }
+    
 
-    DivCadastrarProfessor.style.display = "none"
-    DivEditarProfessor.style.display = "flex"
-    DivExcluirProfessor.style.display = "none"
-}
+    if(vetorUsers == null){
 
-function ApareceExcluirProfessor(){
+        lista = 'Não existem usuários cadastrados'
+
+    }else{
+
+        for(i=0; i<vetorLista.length; i++){
+            
+            lista = lista + (vetorLista[i]) +'<br>'
+    
+        }
+
+    }
+
+    document.getElementById('ListaDeUsuarios').innerHTML = lista
    
-    DivCadastrarProfessor.style.display = "none"
-    DivEditarProfessor.style.display = "none"
-    DivExcluirProfessor.style.display = "flex"
-}
-
-function ApagaTudoCadastro(){
-
-    cadastro.value = ''
-    VarCpf.value = ''
-    codigo.value = ''
-    foto.value = ''
 
 }
 
-function ApagaNomeCadastro(){
-
-    cadastro.value = ''
-
-}
-
-function ApagaCpfEditar(){
-
-
-    Enter.value = ''
-
-}
-
-function ApagaTodosInpEdita(){
-
-    nomeEditar.value = ''
-    cpfEditar.value = ''
-    codigoEditar.value = ''
-    fotoEditar.value = ''
-    Enter.value = ''
-
-}
-
-function ApagaExcluir(){
-
-    ExcluiInp.value = ''
-    document.getElementById('Lista').innerHTML = ''
-
-}
-
-
-function LogOut(){
-
-
-window.location.href = '02-CADASTRO-LOGIN.html'
+    
 
 
 
-}
+
+
+
+
+
+
+
+
 
 
 
