@@ -30,7 +30,7 @@
        <!-- MENU NA BARRA -->
         <div name="MenuBar" id="MenuBar" class="MenuBar"> 
 
-            <button onclick="BotaoLogin()" name="LogoutBotaoBar" id="LogoutBotaoBar" class="LogoutBotaoBar">LOGOUT</button> 
+            <button onclick="LogOut()" name="LogoutBotaoBar" id="LogoutBotaoBar" class="LogoutBotaoBar">LOGOUT</button> 
 
         </div>
 
@@ -50,9 +50,9 @@
 
             <button onclick="ApareceExcluirProfessor()" class="buttonMapLocal"> <div> <img class="imgMapLocal" src="../IMAGENS/SINO-ALERTA.svg" alt="local mapa"> </div>Excluir Professor</button>
             
-            <button class="buttonMapLocal"> <div> <img class="imgMapLocal" src="../IMAGENS/MAPA-INDICADOR.svg" alt="local mapa"> </div> <div>Localizar</div> </button>
+            <button onclick="ApareceLocalizarProfessor()" class="buttonMapLocal"> <div> <img class="imgMapLocal" src="../IMAGENS/MAPA-INDICADOR.svg" alt="local mapa"> </div> <div>Localizar</div> </button>
 
-            <button class="buttonMapLocal"> <div> <img class="imgMapLocal" src="../IMAGENS/MALETA.svg" alt="local mapa"> </div> Documentação</button>
+            <button onclick="ApareceListarProfessor()" class="buttonMapLocal"> <div> <img class="imgMapLocal" src="../IMAGENS/MALETA.svg" alt="local mapa"> </div> Documentação</button>
             
             <button class="buttonMapLocal"> <div> <img class="imgMapLocal" src="../IMAGENS/CALENDARIO.svg" alt="local mapa"> </div> Horarios</button>
             
@@ -80,12 +80,6 @@
                     <input name="inputMovi" type="text" id="CPFProfessor" required class="input" autocomplete="off">
                     <label for="inputMovi" class="inputLabel">CPF</label>
                 </div>
-                
-                <div class="inputGroup"> 
-                    <!-- input nome do usuario adm (secretariado) -->
-                    <input name="inputMovi" type="text" id="FotoProfessor" required class="input" autocomplete="off">
-                    <label for="inputMovi" class="inputLabel">FOTO</label>
-                </div>
 
                 <div class="inputGroup"> 
                     <!-- input nome do usuario adm (secretariado) -->
@@ -101,6 +95,11 @@
 <!-- excluir professor -->
             <div id="DivExcluiProfessor" class="abaDireitaTop">
 
+                <div class="fotoPerfilDiv">
+                    <img class="fotoPerfil" src="../IMAGENS/MULHER.svg" alt="foto de perfil">
+
+                </div>
+
                 <div class="inputGroup"> 
                     <!-- input nome do usuario adm (secretariado) -->
                     <input name="inputMovi" type="text" id="InpPesquisaProfessor" required class="input" autocomplete="off">
@@ -111,19 +110,19 @@
 
                 <button id="Logar" class="LogarCadastrar" onclick="ExcluirProfessor()" >Excluir</button>
 
-                <div id="lista">
+                <div id="Lista" class="Lista">
 
-                    <div id="Nome">
+                    <div id="Nome" class="LISTAR">
 
 
                     </div >
                     
-                    <div id="Cpf">
+                    <div id="Cpf" class="LISTAR">
                     
                     
                     </div >
                     
-                    <div id="Codigo">
+                    <div id="Codigo" class="LISTAR">
                     
                     
                     </div >
@@ -133,6 +132,11 @@
 
 
             <div id="DivEditaProfessor" class="abaDireitaTop">
+
+                <div class="fotoPerfilDiv">
+                    <img class="fotoPerfil" src="../IMAGENS/MULHER.svg" alt="foto de perfil">
+
+                </div>
 
                 <div class="inputGroup"> 
                     <input name="inputMovi" type="text" id="InpEditaProfessor" required class="input" autocomplete="off">
@@ -156,77 +160,39 @@
                     <label for="inputMovi" class="inputLabel">Codigo</label>
                 </div>
 
-                <div class="inputGroup"> 
-                    <input name="inputMovi" type="text" id="InpEditaFoto" required class="input" autocomplete="off">
-                    <label for="inputMovi" class="inputLabel">Foto</label>
-                </div>
-
                 <button id="BotaoEditarProfessor" class="LogarCadastrar" onclick="EditarProfessor()">Editar</button>
 
-
-                <div id="lista">
-                    <div id="Nome">
-
-
-                    </div >
-                    
-                    <div id="Cpf">
-                    
-                    
-                    </div >
-                    
-                    <div id="Codigo">
-
-                    
-                    </div >
-
-                </div >
             </div>
 
             
 
-            <div class="abaDireitaMapa">
-                
-                <div id="sala01" class="sala01">
-                    <h1>sala 01</h1>
-
-                </div>
-
-                <div id="sala02" class="sala02">
-                    <h1>sala 02</h1>
-                </div>
-
-                <div id="sala03" class="sala03">
-                    <h1>sala 03</h1>
-                </div>
-
-                <div id="sala04" class="sala04">
-                    <h1>sala 04</h1>
-                </div>
-                </div>
-
-                <div class="abaDireitaMapa">
-                
-                    <div class="sala01">
-                        <div id="Nome">
-                            nome
-
-                        </div >
-                    </div>
-    
-                    <div class="sala02">
-                        <div id="Cpf">
-                            cpf
+                <div id="DivLocalizarProfessor" class="abaDireitaSalas">
                     
-                        </div >
+                    <div id="sala01" class="sala1">
+                        <h1>SALA 01</h1>
+
                     </div>
-    
-                    <div class="sala03">
-                        <div id="Codigo">
-                            Codigo
-                        
-                        </div >
-                    </div>                
+
+                    <div id="sala02" class="sala2">
+                        <h1>SALA 02</h1>
+                    </div>
+
+                    <div id="sala03" class="sala3">
+                        <h1>SALA 03</h1>
+                    </div>
+
+                    <div id="sala04" class="sala4">
+                        <h1>SALA 04</h1>
+                    </div>  
+                </div>
+                    
+                <div id="DivListarProfessor" class="abaDireitaSalas">
+                    
+                    <button id="BotaoListaProfessor" class="LogarCadastrar" onclick="BotãoListaProfessor()">Listar</button>
+
+                    <div id="ListaDeUsuarios" class="LISTARGrande"></div>
+
+
                 </div>
             </div>
         </div>
